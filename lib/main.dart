@@ -1,13 +1,13 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio_vivek/app.dart';
-import 'package:portfolio_vivek/firebase_config.dart';
-import 'package:portfolio_vivek/screens/error404.screens.dart';
 import 'package:provider/provider.dart';
+import 'package:portfolio_vivek/app.dart';
 import 'providers/firestore_provider.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:portfolio_vivek/firebase_config.dart';
+import 'package:portfolio_vivek/screens/splash.screens.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
         title: 'VivekS. portfolio',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            primarySwatch: Colors.lightGreen,
+            primaryColor: const Color(0xFF0BDA74),
             useMaterial3: true,
             textTheme: GoogleFonts.firaSansTextTheme()),
         home: FutureBuilder<bool>(
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
             if (snapshot.connectionState == ConnectionState.done) {
               return const App();
             } else {
-              return const Error404();
+              return const SplashScreen();
             }
           },
         ),

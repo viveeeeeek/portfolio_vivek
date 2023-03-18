@@ -14,11 +14,11 @@
     ],
     "headers": [
       {
-        "source": "**/*",
+        "source": "**/*.@(jpg|jpeg|gif|png|svg)",
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "no-cache, no-store, must-revalidate"
+            "value": "public, max-age=3600"
           }
         ]
       }
