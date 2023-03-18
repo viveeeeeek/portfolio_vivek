@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio_vivek/extras/constants.dart';
-import 'package:portfolio_vivek/extras/onhover.dart';
-import 'package:portfolio_vivek/providers/firestore_provider.dart';
-import 'package:provider/provider.dart';
 import 'package:logger/logger.dart';
-
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../widgets/blogs/blog_post_popup.dart';
+import 'package:portfolio_vivek/extras/onhover.dart';
+import 'package:portfolio_vivek/extras/constants.dart';
+import 'package:portfolio_vivek/screens/splash.screens.dart';
+import 'package:portfolio_vivek/providers/firestore_provider.dart';
 
 class BlogScreen extends StatefulWidget {
   const BlogScreen({Key? key}) : super(key: key);
@@ -72,9 +72,7 @@ class _BlogScreenState extends State<BlogScreen> {
                         if (snapshot.connectionState ==
                             ConnectionState.waiting) {
                           return const Center(
-                            child: CircularProgressIndicator(
-                              color: Color(0xFF0BDA74),
-                            ),
+                            child: CustomLoadingIndicator(),
                           );
                         } else if (snapshot.connectionState ==
                             ConnectionState.done) {

@@ -27,57 +27,6 @@ class _DesktopAboutState extends State<DesktopAbout> {
             const SizedBox(
               height: 50,
             ),
-            RichText(
-              text: TextSpan(children: [
-                TextSpan(
-                  text: "I'm a developer crazy about bringing ",
-                  style: aboutMainFontStyle,
-                ),
-                TextSpan(
-                  text: 'something ',
-                  style: aboutHighlightFontStyle,
-                ),
-                TextSpan(
-                  text: 'to life from',
-                  style: aboutMainFontStyle,
-                ),
-                TextSpan(
-                  text: '\nnothing',
-                  style: aboutNoHighlightFotStyle,
-                ),
-                TextSpan(
-                  text: '. ',
-                  style: aboutMainFontStyle,
-                ),
-                TextSpan(
-                  text:
-                      'My focus is on constant learning and using that\nknowledge in practice as soon as possible - theory is cool\nbut working on your own thing is way ',
-                  style: aboutMainFontStyle,
-                ),
-                TextSpan(
-                  text: ':',
-                  style: TextStyle(
-                      color: whiteColour,
-                      fontSize: 33,
-                      letterSpacing: 2,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic),
-                ),
-                TextSpan(
-                  text: 'coooler',
-                  style: aboutNoHighlightFotStyle,
-                ),
-                TextSpan(
-                  text: ':',
-                  style: TextStyle(
-                      color: whiteColour,
-                      fontSize: 33,
-                      letterSpacing: 2,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic),
-                ),
-              ]),
-            ),
             sizedBox75,
             SizedBox(
               height: 325,

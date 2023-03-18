@@ -135,7 +135,7 @@ class _MobileContactState extends State<MobileContact> {
                             ContactButton(
                               imageAddress: 'assets/email.png',
                               buttonText: 'Send me an email',
-                              buttonFunction: launchLinkedInChat,
+                              buttonFunction: sendEmail,
                             ),
                             SizedBox(height: 8),
                             //! Download CV button

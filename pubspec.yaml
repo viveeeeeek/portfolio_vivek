@@ -39,6 +39,7 @@ dependencies:
   lottie:
   logger:
   provider:
+  animate_do:
   flutter_svg:
   google_fonts:
   url_launcher:
@@ -46,6 +47,7 @@ dependencies:
   scroll_to_index:
   cloud_firestore:
   animated_text_kit:
+  visibility_detector:
   
 
 dev_dependencies:
