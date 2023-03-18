@@ -1,10 +1,19 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_vivek/extras/onhover.dart';
 import 'package:portfolio_vivek/extras/constants.dart';
 import 'package:portfolio_vivek/widgets/contact/contact_button.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
-class DesktopContact extends StatelessWidget {
+class DesktopContact extends StatefulWidget {
   const DesktopContact({super.key});
+
+  @override
+  State<DesktopContact> createState() => _DesktopContactState();
+}
+
+class _DesktopContactState extends State<DesktopContact> {
+  bool isStackedGreenContainer = false;
 
   @override
   Widget build(BuildContext context) {
@@ -133,18 +142,33 @@ class DesktopContact extends StatelessWidget {
                     ],
                   )),
             )),
-
-        //! Green rounded cube stacked on contact card
         Positioned(
-            bottom: 0,
-            right: 0,
-            child: Container(
-              height: 50,
-              width: 100,
-              decoration: BoxDecoration(
-                  color: brandColour,
-                  borderRadius: const BorderRadius.all(Radius.circular(16))),
-            )),
+          bottom: 0,
+          right: 0,
+          child: VisibilityDetector(
+              key: const Key('stackedGreenContainer'),
+              onVisibilityChanged: (visibilityInfo) {
+                if (visibilityInfo.visibleFraction >= 0.5) {
+                  // Call the animate function for the FadeIn animation
+                  setState(() {
+                    isStackedGreenContainer = true;
+                  });
+                }
+              },
+              child: FadeInUp(
+                duration: const Duration(seconds: 1),
+                animate: isStackedGreenContainer,
+                child: Container(
+                  height: 50,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: brandColour,
+                    borderRadius: const BorderRadius.all(Radius.circular(16)),
+                  ),
+                ),
+              )),
+        ),
+        //! Green rounded cube stacked on contact card
       ],
     ));
   }

@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
@@ -10,6 +11,7 @@ import 'package:portfolio_vivek/widgets/header/header.dart';
 import 'package:portfolio_vivek/widgets/footer/footer.dart';
 import 'package:portfolio_vivek/widgets/contact/contact.dart';
 import 'package:portfolio_vivek/device/desktop/blogs.desktop.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
 class DesktopHomepage extends StatefulWidget {
   const DesktopHomepage({super.key});
@@ -19,6 +21,9 @@ class DesktopHomepage extends StatefulWidget {
 }
 
 class _DesktopHomepageState extends State<DesktopHomepage> {
+  bool isContactVisible = false;
+  bool isAboutVisible = false;
+
   @override
   Widget build(BuildContext context) {
     final controller = AutoScrollController(
@@ -75,21 +80,33 @@ class _DesktopHomepageState extends State<DesktopHomepage> {
                         ),
                         sizedBox150, //! Spacer
                         AutoScrollTag(
-                            key: const ValueKey(2),
-                            index: 2,
-                            controller: controller,
-                            child: const About()),
+                          key: const ValueKey(2),
+                          index: 2,
+                          controller: controller,
+                          child: const About(),
+                        ),
                         sizedBox200,
                         const Skills(),
                         sizedBox200,
                         const DesktopBlogs(),
                         sizedBox200,
                         // // Work(),
-                        AutoScrollTag(
-                            key: const ValueKey(4),
-                            index: 4,
-                            controller: controller,
-                            child: const ContactCard()),
+                        VisibilityDetector(
+                            key: const Key('contact'),
+                            onVisibilityChanged: (visibilityInfo) {
+                              if (visibilityInfo.visibleFraction >= 0.5) {
+                                // Call the animate function for the FadeIn animation
+                                setState(() {
+                                  isContactVisible = true;
+                                });
+                              }
+                            },
+                            child: FadeInUp(
+                              duration: const Duration(seconds: 1),
+                              animate: isContactVisible,
+                              from: 75,
+                              child: const ContactCard(),
+                            )),
                         sizedBox75, //! Spacing
                         const Footer(),
                       ],
