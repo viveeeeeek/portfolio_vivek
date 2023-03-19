@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import '../widgets/blogs/blog_post_popup.dart';
 import 'package:portfolio_vivek/extras/onhover.dart';
 import 'package:portfolio_vivek/extras/constants.dart';
-import 'package:portfolio_vivek/screens/splash.screens.dart';
+import 'package:portfolio_vivek/screens/splash.screen.dart';
 import 'package:portfolio_vivek/providers/firestore_provider.dart';
 
 class BlogScreen extends StatefulWidget {
@@ -55,7 +55,7 @@ class _BlogScreenState extends State<BlogScreen> {
         return Scaffold(
             backgroundColor: Colors.black,
             body: Padding(
-              padding: const EdgeInsets.all(35.0),
+              padding: const EdgeInsets.fromLTRB(35, 35, 35, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -63,7 +63,7 @@ class _BlogScreenState extends State<BlogScreen> {
                     "Blogs  🖹",
                     style: aboutHighlightFontStyle,
                   ),
-                  sizedBox50,
+                  sizedBox35,
                   Expanded(
                     child: FutureBuilder(
                       future: _future,

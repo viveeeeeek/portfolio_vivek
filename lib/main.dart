@@ -7,7 +7,7 @@ import 'providers/firestore_provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:portfolio_vivek/firebase_config.dart';
-import 'package:portfolio_vivek/screens/splash.screens.dart';
+import 'package:portfolio_vivek/screens/splash.screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

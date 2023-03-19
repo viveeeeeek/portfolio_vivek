@@ -46,6 +46,15 @@ class DesktopHeader extends StatelessWidget {
                     letterSpacing: 1,
                     fontWeight: FontWeight.bold),
               ),
+              RotateAnimatedText(
+                'Bonjour,',
+                alignment: Alignment.centerLeft,
+                textStyle: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 28,
+                    letterSpacing: 1,
+                    fontWeight: FontWeight.w500),
+              ),
               FadeAnimatedText(
                 // '🤌🏻 Hola,',
                 'Hola,',

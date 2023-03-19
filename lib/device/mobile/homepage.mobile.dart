@@ -27,6 +27,16 @@ class _MobileHomepageState extends State<MobileHomepage> {
             Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom),
         axis: Axis.vertical);
 
+    Future<void> refreshData() async {
+      // perform data fetching or reload the page
+      // for example, you can use the Navigator to reload the current page:
+      await Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+            builder: (BuildContext context) => const MobileHomepage()),
+      );
+    }
+
     return WillPopScope(
       //! To enable the browser's back button to navigate back to the previous screen in your Flutter app,
       //! you should use Navigator.maybePop instead of Navigator.push.
@@ -38,8 +48,11 @@ class _MobileHomepageState extends State<MobileHomepage> {
         body: Stack(
           children: [
             RefreshIndicator(
+              backgroundColor: const Color(0xff222524),
+              color: brandColour,
+              strokeWidth: 3.0,
               onRefresh:
-                  _refreshData, // specify the function to call when the user pulls down
+                  refreshData, //! specify the function to call when the user pulls down
 
               child: ListView(
                 controller: controller,
@@ -62,9 +75,7 @@ class _MobileHomepageState extends State<MobileHomepage> {
                               index: 1,
                               controller: controller,
                               child: const Header()),
-                          const SizedBox(
-                            height: 250,
-                          ),
+                          sizedBox250,
                           Center(
                             child: InkWell(
                               onTap: () {
@@ -76,9 +87,7 @@ class _MobileHomepageState extends State<MobileHomepage> {
                               ),
                             ),
                           ),
-                          const SizedBox(
-                            height: 250,
-                          ),
+                          sizedBox250,
                           AutoScrollTag(
                               key: const ValueKey(2),
                               index: 2,
@@ -90,11 +99,7 @@ class _MobileHomepageState extends State<MobileHomepage> {
                           const MobileBlogs(),
                           sizedBox150,
                           // // Work(),
-                          AutoScrollTag(
-                              key: const ValueKey(4),
-                              index: 4,
-                              controller: controller,
-                              child: const ContactCard()),
+                          const ContactCard(),
                           sizedBox150,
                           const Footer(),
                         ],
