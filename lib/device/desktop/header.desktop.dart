@@ -19,51 +19,31 @@ class DesktopHeader extends StatelessWidget {
                 // '🤝 Hello,',
                 'Hello,',
                 duration: const Duration(milliseconds: 1500),
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 48,
-                    letterSpacing: 1,
-                    fontWeight: FontWeight.bold),
+                textStyle: desktopAnimatedTextKitTextStyle,
               ),
               FadeAnimatedText(
                 // '🙏🏼 Namaste,',
                 'Namaste,',
                 duration: const Duration(milliseconds: 1500),
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 48,
-                    letterSpacing: 1,
-                    fontWeight: FontWeight.bold),
+                textStyle: desktopAnimatedTextKitTextStyle,
               ),
               FadeAnimatedText(
                 // '🙇🏻‍♂ Konnichiwa',
 
                 'Konnichiwa,',
                 duration: const Duration(milliseconds: 1500),
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 48,
-                    letterSpacing: 1,
-                    fontWeight: FontWeight.bold),
+                textStyle: desktopAnimatedTextKitTextStyle,
               ),
               RotateAnimatedText(
                 'Bonjour,',
                 alignment: Alignment.centerLeft,
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 28,
-                    letterSpacing: 1,
-                    fontWeight: FontWeight.w500),
+                textStyle: desktopAnimatedTextKitTextStyle,
               ),
               FadeAnimatedText(
                 // '🤌🏻 Hola,',
                 'Hola,',
                 duration: const Duration(milliseconds: 1500),
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 48,
-                    letterSpacing: 1,
-                    fontWeight: FontWeight.bold),
+                textStyle: desktopAnimatedTextKitTextStyle,
               ),
             ],
             isRepeatingAnimation: true,

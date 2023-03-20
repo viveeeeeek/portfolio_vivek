@@ -103,8 +103,22 @@ TextStyle hoveredTextStyleContactButton =
 TextStyle normalTextStyleContactButton =
     TextStyle(color: whiteColour, wordSpacing: 1);
 
-//! Custom spacings
-Widget sizedBox250 = const SizedBox(height: 20);
+//! Desker AnimatedTextKit TextStyle
+TextStyle desktopAnimatedTextKitTextStyle = GoogleFonts.firaSans(
+    textStyle: const TextStyle(
+        color: Colors.white,
+        fontSize: 48,
+        letterSpacing: 1,
+        fontWeight: FontWeight.w500));
+TextStyle mobileAnimatedTextKitTextStyle = GoogleFonts.firaSans(
+    textStyle: const TextStyle(
+        color: Colors.white,
+        fontSize: 28,
+        letterSpacing: 1,
+        fontWeight: FontWeight.w500));
+
+////! Custom spacings
+Widget sizedBox250 = const SizedBox(height: 250);
 Widget sizedBox200 = const SizedBox(height: 200);
 Widget sizedBox150 = const SizedBox(height: 150);
 Widget sizedBox100 = const SizedBox(height: 100);

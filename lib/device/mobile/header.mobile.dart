@@ -16,54 +16,28 @@ class MobileHeader extends StatelessWidget {
           child: AnimatedTextKit(
             animatedTexts: [
               RotateAnimatedText(
-                // '🤝 Hello,',
-                'Hello,',
-                alignment: Alignment.centerLeft,
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 28,
-                    letterSpacing: 1,
-                    fontWeight: FontWeight.w500),
-              ),
+                  // '🤝 Hello,',
+                  'Hello,',
+                  alignment: Alignment.centerLeft,
+                  textStyle: mobileAnimatedTextKitTextStyle),
               RotateAnimatedText(
-                // '🙏🏼 Namaste,',
-                'Namaste,',
-                alignment: Alignment.centerLeft,
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 28,
-                    letterSpacing: 1,
-                    fontWeight: FontWeight.w500),
-              ),
+                  // '🙏🏼 Namaste,',
+                  'Namaste,',
+                  alignment: Alignment.centerLeft,
+                  textStyle: mobileAnimatedTextKitTextStyle),
               RotateAnimatedText(
-                // '🤌🏻 Hola,',
-                'Hola,',
-                alignment: Alignment.centerLeft,
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 28,
-                    letterSpacing: 1,
-                    fontWeight: FontWeight.w500),
-              ),
+                  // '🤌🏻 Hola,',
+                  'Hola,',
+                  alignment: Alignment.centerLeft,
+                  textStyle: mobileAnimatedTextKitTextStyle),
+              RotateAnimatedText('Bonjour,',
+                  alignment: Alignment.centerLeft,
+                  textStyle: mobileAnimatedTextKitTextStyle),
               RotateAnimatedText(
-                'Bonjour,',
-                alignment: Alignment.centerLeft,
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 28,
-                    letterSpacing: 1,
-                    fontWeight: FontWeight.w500),
-              ),
-              RotateAnimatedText(
-                // '🙇🏻‍♂ Konnichiwa',
-                'Konnichiwa,',
-                alignment: Alignment.centerLeft,
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 28,
-                    letterSpacing: 1,
-                    fontWeight: FontWeight.w500),
-              )
+                  // '🙇🏻‍♂ Konnichiwa',
+                  'Konnichiwa,',
+                  alignment: Alignment.centerLeft,
+                  textStyle: mobileAnimatedTextKitTextStyle)
             ],
             isRepeatingAnimation: true,
             repeatForever: true,
