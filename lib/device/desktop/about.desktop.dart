@@ -35,7 +35,7 @@ class _DesktopAboutState extends State<DesktopAbout> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "I'm currently available for a stationary developer position\nsomewhere in Krakåw, Poland. If you got something\ninteresting, feel more than encouraged to contact me!",
+                    "I'm currently available for a developer position\nsomewhere in Pune, Maharashtra. If you got something\ninteresting, feel more than encouraged to contact me!",
                     style: TextStyle(
                       color: whiteColour,
                       fontSize: 18,
