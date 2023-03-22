@@ -29,8 +29,7 @@ class MobileBlogs extends StatelessWidget {
           ),
         ),
         sizedBox35,
-        HoverWidget(
-            child: InkWell(
+        InkWell(
           onTap: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: ((context) => const BlogScreen())));
@@ -51,7 +50,7 @@ class MobileBlogs extends StatelessWidget {
               ),
             ),
           ),
-        ))
+        )
       ],
     );
   }

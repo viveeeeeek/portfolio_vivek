@@ -16,7 +16,6 @@ class DesktopBlogs extends StatelessWidget {
           style: TextStyle(
               fontSize: 16, // Adjust the font size as necessary
               color: brandColour,
-              fontWeight: FontWeight.bold,
               letterSpacing: 2),
         ),
         sizedBox50,

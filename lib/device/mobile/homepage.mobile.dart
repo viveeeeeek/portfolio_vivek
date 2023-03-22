@@ -1,6 +1,7 @@
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:portfolio_vivek/device/mobile/work.mobile.dart';
 import 'package:portfolio_vivek/widgets/skills.dart';
 import 'package:portfolio_vivek/extras/onhover.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
@@ -95,6 +96,8 @@ class _MobileHomepageState extends State<MobileHomepage> {
                               child: const About()),
                           sizedBox100,
                           const Skills(),
+                          sizedBox150,
+                          const MobileWork(),
                           sizedBox150,
                           const MobileBlogs(),
                           sizedBox150,

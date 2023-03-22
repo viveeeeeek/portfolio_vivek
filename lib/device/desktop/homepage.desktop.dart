@@ -2,6 +2,7 @@ import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:portfolio_vivek/device/desktop/work.desktop.dart';
 import 'package:portfolio_vivek/widgets/skills.dart';
 import 'package:portfolio_vivek/extras/onhover.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
@@ -87,6 +88,8 @@ class _DesktopHomepageState extends State<DesktopHomepage> {
                         ),
                         sizedBox200,
                         const Skills(),
+                        sizedBox200,
+                        const DesktopWork(),
                         sizedBox200,
                         const DesktopBlogs(),
                         sizedBox200,
