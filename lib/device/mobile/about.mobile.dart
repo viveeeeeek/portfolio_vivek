@@ -131,41 +131,41 @@ class _MobileAboutState extends State<MobileAbout> {
           right: 0,
           child: Stack(
             children: [
-              Positioned(
-                left: 0,
-                bottom: 25,
-                child: Padding(
-                    padding: const EdgeInsets.only(left: 0, bottom: 0),
-                    child: Container(
-                      // margin: EdgeInsets.only(left: 200, bottom: 200),
-                      height: 150,
-                      width: 200,
-                      decoration: BoxDecoration(
-                          color: whiteColour,
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(25))),
-                      child: ClipRRect(
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(25)),
-                        child: Image.asset(
-                          'assets/digitalvivek.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    )),
-              ),
-              Positioned(
-                bottom: 80,
-                right: 0,
-                child: Container(
-                  height: 60,
-                  width: 100,
-                  decoration: BoxDecoration(
-                      color: brandColour,
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(25))),
-                ),
-              ),
+              // Positioned(
+              //   left: 0,
+              //   bottom: 25,
+              //   child: Padding(
+              //       padding: const EdgeInsets.only(left: 0, bottom: 0),
+              //       child: Container(
+              //         // margin: EdgeInsets.only(left: 200, bottom: 200),
+              //         height: 150,
+              //         width: 200,
+              //         decoration: BoxDecoration(
+              //             color: whiteColour,
+              //             borderRadius:
+              //                 const BorderRadius.all(Radius.circular(25))),
+              //         child: ClipRRect(
+              //           borderRadius:
+              //               const BorderRadius.all(Radius.circular(25)),
+              //           child: Image.asset(
+              //             'assets/digitalvivek.png',
+              //             fit: BoxFit.cover,
+              //           ),
+              //         ),
+              //       )),
+              // ),
+              // Positioned(
+              //   bottom: 80,
+              //   right: 0,
+              //   child: Container(
+              //     height: 60,
+              //     width: 100,
+              //     decoration: BoxDecoration(
+              //         color: brandColour,
+              //         borderRadius:
+              //             const BorderRadius.all(Radius.circular(25))),
+              //   ),
+              // ),
               Positioned(
                 child: Padding(
                     padding: const EdgeInsets.only(left: 100, bottom: 100),

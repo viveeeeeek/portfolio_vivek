@@ -1,6 +1,5 @@
 import 'package:portfolio_vivek/extras/onhover.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../extras/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +37,7 @@ class DesktopWork extends StatelessWidget {
                   color: Colors.white,
                   fontSize: 26,
                   letterSpacing: 1,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.w600),
             ),
             TextSpan(
               text: 'time-saving alternatives.',
