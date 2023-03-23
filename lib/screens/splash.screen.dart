@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class SplashScreen extends StatelessWidget {
           size: 64.0,
         ),
       ),
-    );
+    ).animate().fade();
   }
 }
 

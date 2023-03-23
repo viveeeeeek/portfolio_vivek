@@ -48,6 +48,7 @@ dependencies:
   cloud_firestore:
   animated_text_kit:
   visibility_detector:
+  flutter_animate:
   
 
 dev_dependencies:
