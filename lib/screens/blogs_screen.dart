@@ -43,6 +43,15 @@ class _BlogScreenState extends State<BlogScreen> {
     );
   }
 
+  Future<void> refreshData() async {
+    // perform data fetching or reload the page
+    // for example, you can use the Navigator to reload the current page:
+    await Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (BuildContext context) => const BlogScreen()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<BlogPostProvider>(context);
@@ -56,16 +65,20 @@ class _BlogScreenState extends State<BlogScreen> {
             backgroundColor: Colors.black,
             body: Padding(
               padding: const EdgeInsets.fromLTRB(35, 35, 35, 0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Blogs  🖹",
-                    style: aboutHighlightFontStyle,
-                  ),
-                  sizedBox35,
-                  Expanded(
-                    child: FutureBuilder(
+              child: RefreshIndicator(
+                backgroundColor: const Color(0xff222524),
+                color: brandColour,
+                strokeWidth: 3.0,
+                onRefresh:
+                    refreshData, //! specify the function to call when the user pulls down
+                child: ListView(
+                  children: [
+                    Text(
+                      "Blogs  🖹",
+                      style: aboutHighlightFontStyle,
+                    ),
+                    sizedBox35,
+                    FutureBuilder(
                       future: _future,
                       builder:
                           (BuildContext context, AsyncSnapshot<void> snapshot) {
@@ -148,8 +161,8 @@ class _BlogScreenState extends State<BlogScreen> {
                         }
                       },
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ));
       }

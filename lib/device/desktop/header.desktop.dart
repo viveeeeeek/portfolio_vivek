@@ -29,7 +29,6 @@ class DesktopHeader extends StatelessWidget {
               ),
               FadeAnimatedText(
                 // '🙇🏻‍♂ Konnichiwa',
-
                 'Konnichiwa,',
                 duration: const Duration(milliseconds: 1500),
                 textStyle: desktopAnimatedTextKitTextStyle,
@@ -79,32 +78,3 @@ class DesktopHeader extends StatelessWidget {
     );
   }
 }
-
-// class MyAnimatedRichText extends StatelessWidget {
-//   final TextStyle textStyle;
-//   final String textString;
-
-//   const MyAnimatedRichText(
-//       {Key? key, required this.textStyle, required this.textString})
-//       : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return AnimatedTextKit(
-//       animatedTexts: [
-//         TyperAnimatedText(
-//           textString,
-//           textStyle: textStyle,
-//           speed: const Duration(milliseconds: 200),
-//           curve: Curves.easeIn,
-//         )
-//       ],
-//       repeatForever: true,
-//       displayFullTextOnTap: true,
-//       stopPauseOnTap: true,
-//       onTap: () {
-//         // Do something when the text is tapped
-//       },
-//     );
-//   }
-// }

@@ -1,15 +1,15 @@
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:portfolio_vivek/device/mobile/about.mobile.dart';
+import 'package:portfolio_vivek/device/mobile/contact.mobile.dart';
+import 'package:portfolio_vivek/device/mobile/header.mobile.dart';
 import 'package:portfolio_vivek/device/mobile/work.mobile.dart';
 import 'package:portfolio_vivek/widgets/skills.dart';
 import 'package:portfolio_vivek/extras/onhover.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:portfolio_vivek/extras/constants.dart';
-import 'package:portfolio_vivek/widgets/about/about.dart';
-import 'package:portfolio_vivek/widgets/header/header.dart';
 import 'package:portfolio_vivek/widgets/footer/footer.dart';
-import 'package:portfolio_vivek/widgets/contact/contact.dart';
 import 'package:portfolio_vivek/device/mobile/blogs.mobile.dart';
 
 class MobileHomepage extends StatefulWidget {
@@ -46,6 +46,7 @@ class _MobileHomepageState extends State<MobileHomepage> {
         return isPop;
       },
       child: Scaffold(
+        backgroundColor: const Color(0xff050505),
         body: Stack(
           children: [
             RefreshIndicator(
@@ -75,7 +76,7 @@ class _MobileHomepageState extends State<MobileHomepage> {
                               key: const ValueKey(1),
                               index: 1,
                               controller: controller,
-                              child: const Header()),
+                              child: const MobileHeader()),
                           sizedBox250,
                           Center(
                             child: InkWell(
@@ -93,7 +94,11 @@ class _MobileHomepageState extends State<MobileHomepage> {
                               key: const ValueKey(2),
                               index: 2,
                               controller: controller,
-                              child: const About()),
+                              child: MobileAbout(
+                                aboutSectionButton: () {
+                                  controller.scrollToIndex(3);
+                                },
+                              )),
                           sizedBox100,
                           const Skills(),
                           sizedBox150,
@@ -102,7 +107,11 @@ class _MobileHomepageState extends State<MobileHomepage> {
                           const MobileBlogs(),
                           sizedBox150,
                           // // Work(),
-                          const ContactCard(),
+                          AutoScrollTag(
+                              key: const ValueKey(3),
+                              index: 3,
+                              controller: controller,
+                              child: const MobileContact()),
                           sizedBox150,
                           const Footer(),
                         ],

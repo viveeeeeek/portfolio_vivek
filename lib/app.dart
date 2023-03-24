@@ -11,7 +11,6 @@ class App extends StatelessWidget {
     return LayoutBuilder(builder: (context, constraints) {
       if (constraints.maxWidth < 500) {
         return const MobileHomepage().animate().fade();
-        ;
       }
       //! Implement Tablet view here.
       // else if(){
@@ -19,7 +18,6 @@ class App extends StatelessWidget {
       // }
       else {
         return const DesktopHomepage().animate().fade();
-        ;
       }
     });
   }

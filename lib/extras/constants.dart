@@ -5,6 +5,15 @@ Color brandColour = const Color(0xFF0BDA74);
 Color blackColour = const Color(0xff050505);
 Color whiteColour = const Color(0xFFFFFFFF);
 
+//! Desktop Sections Title TextStyles
+TextStyle desktopSectionTitleFontStyle = GoogleFonts.firaSans(
+  textStyle: TextStyle(fontSize: 16, color: brandColour, letterSpacing: 2),
+);
+//! Mobile Sections Title TextStyles
+TextStyle mobileSectionTitleFontStyle = GoogleFonts.firaSans(
+  textStyle: TextStyle(fontSize: 10, color: brandColour, letterSpacing: 2),
+);
+
 //! Contact card TextStyles
 TextStyle contactHighlightFontStyle = GoogleFonts.firaSans(
     textStyle: TextStyle(

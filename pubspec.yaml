@@ -46,9 +46,10 @@ dependencies:
   firebase_core:
   scroll_to_index:
   cloud_firestore:
+  flutter_animate:
   animated_text_kit:
   visibility_detector:
-  flutter_animate:
+
   
 
 dev_dependencies:

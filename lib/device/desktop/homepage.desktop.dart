@@ -2,15 +2,15 @@ import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:portfolio_vivek/device/desktop/about.desktop.dart';
+import 'package:portfolio_vivek/device/desktop/contact.desktop.dart';
+import 'package:portfolio_vivek/device/desktop/header.desktop.dart';
 import 'package:portfolio_vivek/device/desktop/work.desktop.dart';
 import 'package:portfolio_vivek/widgets/skills.dart';
 import 'package:portfolio_vivek/extras/onhover.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:portfolio_vivek/extras/constants.dart';
-import 'package:portfolio_vivek/widgets/about/about.dart';
-import 'package:portfolio_vivek/widgets/header/header.dart';
 import 'package:portfolio_vivek/widgets/footer/footer.dart';
-import 'package:portfolio_vivek/widgets/contact/contact.dart';
 import 'package:portfolio_vivek/device/desktop/blogs.desktop.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
@@ -61,7 +61,7 @@ class _DesktopHomepageState extends State<DesktopHomepage> {
                             key: const ValueKey(1),
                             index: 1,
                             controller: controller,
-                            child: const Header()),
+                            child: const DesktopHeader()),
                         sizedBox150, //! Spacer
                         Center(
                           child: InkWell(
@@ -84,7 +84,7 @@ class _DesktopHomepageState extends State<DesktopHomepage> {
                           key: const ValueKey(2),
                           index: 2,
                           controller: controller,
-                          child: const About(),
+                          child: const DesktopAbout(),
                         ),
                         sizedBox200,
                         const Skills(),
@@ -108,7 +108,7 @@ class _DesktopHomepageState extends State<DesktopHomepage> {
                               duration: const Duration(seconds: 1),
                               animate: isContactVisible,
                               from: 75,
-                              child: const ContactCard(),
+                              child: const DesktopContact(),
                             )),
                         sizedBox75, //! Spacing
                         const Footer(),
