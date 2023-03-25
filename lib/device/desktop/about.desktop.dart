@@ -24,12 +24,9 @@ class _DesktopAboutState extends State<DesktopAbout> {
               style:
                   TextStyle(fontSize: 16, color: brandColour, letterSpacing: 2),
             ),
-            const SizedBox(
-              height: 50,
-            ),
-            sizedBox75,
+            sizedBox50,
             SizedBox(
-              height: 325,
+              height: 400,
               width: screenSize.width,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

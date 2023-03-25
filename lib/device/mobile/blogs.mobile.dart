@@ -13,7 +13,7 @@ class MobileBlogs extends StatelessWidget {
         Text(
           "THOUGHTS AND INSIGHTS 💭",
           style: TextStyle(
-              fontSize: 12, // Adjust the font size as necessary
+              fontSize: 10, // Adjust the font size as necessary
               color: brandColour,
               fontWeight: FontWeight.bold,
               letterSpacing: 2),
