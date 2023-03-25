@@ -64,7 +64,7 @@ class _BlogScreenState extends State<BlogScreen> {
         return Scaffold(
             backgroundColor: Colors.black,
             body: Padding(
-              padding: const EdgeInsets.fromLTRB(35, 35, 35, 0),
+              padding: const EdgeInsets.fromLTRB(35, 0, 35, 0),
               child: RefreshIndicator(
                 backgroundColor: const Color(0xff222524),
                 color: brandColour,
@@ -73,11 +73,12 @@ class _BlogScreenState extends State<BlogScreen> {
                     refreshData, //! specify the function to call when the user pulls down
                 child: ListView(
                   children: [
+                    sizedBox35,
                     Text(
                       "Blogs  🖹",
                       style: aboutHighlightFontStyle,
                     ),
-                    sizedBox35,
+                    sizedBox25,
                     FutureBuilder(
                       future: _future,
                       builder:
