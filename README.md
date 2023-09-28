@@ -24,7 +24,9 @@ This is a portfolio website built using Flutter and hosted on Firebase. The webs
 
 ## Live Demo 🌐
 
-To see the website in action, check out the [live demo](insert live demo link here)!
+To see the website in action, check out the [live demo](https://viveeeeeek.us/#/)!
+![image](https://github.com/viveeeeeek/portfolio_vivek/assets/64553247/e8fbd70f-3c96-4340-b917-d2ceb76a5655)
+
 
 ## Technologies Used 🛠️
 
@@ -32,4 +34,11 @@ To see the website in action, check out the [live demo](insert live demo link he
 - Firebase
 - GitHub
 
-Feel free to check out the portfolio website and get in touch using the contact section. Thanks for visiting! 😊
+## Contact
+Have questions or feedback? Feel free to reach out:
+
+📧 Email: v1v3k@duck.com
+
+🐦 Twitter: [@viiv3k](https://twitter.com/viiv3k)
+
+🌐 Website: https://www.viveeeeeek.us
