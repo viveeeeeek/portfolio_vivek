@@ -22,9 +22,9 @@ This is a portfolio website built using Flutter and hosted on Firebase. The webs
 - Contact section with send email button: The website has a contact section, complete with a "send email" button that opens the visitor's email client of choice.
 
 
-## [Live Demo 🌐](https://viveeeeeek.us/#/)
+## [Live Demo 🌐](https://viveeeeeek-portfolio.web.app/)
 
-To see the website in action, check out the [live demo!](https://viveeeeeek.us/#/)
+To see the website in action, check out the [live demo!](https://viveeeeeek-portfolio.web.app/)
 ![image](https://github.com/viveeeeeek/portfolio_vivek/assets/64553247/e8fbd70f-3c96-4340-b917-d2ceb76a5655)
 
 ## [Portfolio Admin App 📱](https://github.com/viveeeeeek/portfolio_admin/)
